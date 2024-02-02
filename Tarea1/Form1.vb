@@ -25,20 +25,31 @@
         gender = ComboBoxGender.SelectedItem.ToString()
         valueString = textValue.Text
         value = Double.Parse(valueString)
+        Dim result As String = calculate(analysisType, gender, value)
+
+        lblResultado.Text = result
     End Sub
 
     Private Function calculate(analysisType As String, gender As String, value As Double)
-        If analysisType = "Red blood cells" AndAlso gender = "Male" AndAlso value <= 4.25 AndAlso value >= 5.9 Then
+        ' hematíes
+        If (analysisType = "Red blood cells" AndAlso gender = "Male" AndAlso value >= 4.25 AndAlso value <= 5.9) OrElse
+           (analysisType = "Red blood cells" AndAlso gender = "Female" AndAlso value >= 4.1 AndAlso value <= 5.1) OrElse
+           (analysisType = "Hemoglobin" AndAlso gender = "Male" AndAlso value >= 14 AndAlso value <= 17.5) OrElse
+           (analysisType = "Hemoglobin" AndAlso gender = "Female" AndAlso value >= 12.3 AndAlso value <= 15.3) OrElse
+           (analysisType = "Hematocrit" AndAlso gender = "Male" AndAlso value >= 42.0 AndAlso value <= 50.0) OrElse
+           (analysisType = "Hematocrit" AndAlso gender = "Female" AndAlso value >= 36.0 AndAlso value <= 45.0) OrElse
+           (analysisType = "Leukocytes" AndAlso gender = "Male" AndAlso value >= 4.4 AndAlso value <= 11.3) OrElse
+           (analysisType = "Leukocytes" AndAlso gender = "Female" AndAlso value >= 4.4 AndAlso value <= 11.3) OrElse
+           (analysisType = "MCV" AndAlso gender = "Male" AndAlso value >= 80.0 AndAlso value <= 96.1) OrElse
+           (analysisType = "MCV" AndAlso gender = "Female" AndAlso value >= 80.0 AndAlso value <= 96.1) OrElse
+           (analysisType = "MCHC" AndAlso gender = "Male" AndAlso value >= 33.4 AndAlso value <= 35.5) OrElse
+           (analysisType = "MCHC" AndAlso gender = "Female" AndAlso value >= 33.4 AndAlso value <= 35.5) OrElse
+           (analysisType = "Platelets" AndAlso gender = "Male" AndAlso value >= 172 AndAlso value <= 450) OrElse
+           (analysisType = "Platelets" AndAlso gender = "Female" AndAlso value >= 172 AndAlso value <= 450) Then
             Return "Standard"
         Else
             Return "Altered"
         End If
 
-        If analysisType = "Red blood cells" AndAlso gender = "Female" AndAlso value <= 4.1 AndAlso value >= 5.1 Then
-            Return "Standard"
-        Else
-            Return "Altered"
-
-        End If
     End Function
 End Class
