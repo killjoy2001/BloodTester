@@ -25,11 +25,13 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BSubmit = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.textValue = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ComboBoxGender = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBoxAnalysis = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BSubmit = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -55,21 +57,68 @@ Partial Class Form1
         Me.Guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel2.Name = "Guna2Panel2"
-        Me.Guna2Panel2.Size = New System.Drawing.Size(537, 541)
+        Me.Guna2Panel2.Size = New System.Drawing.Size(241, 653)
         Me.Guna2Panel2.TabIndex = 2
         '
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.BlueViolet
         Me.Guna2Panel1.Controls.Add(Me.BSubmit)
+        Me.Guna2Panel1.Controls.Add(Me.Label4)
+        Me.Guna2Panel1.Controls.Add(Me.textValue)
         Me.Guna2Panel1.Controls.Add(Me.ComboBoxGender)
         Me.Guna2Panel1.Controls.Add(Me.Label3)
         Me.Guna2Panel1.Controls.Add(Me.ComboBoxAnalysis)
         Me.Guna2Panel1.Controls.Add(Me.Label2)
         Me.Guna2Panel1.Location = New System.Drawing.Point(31, 76)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(175, 453)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(176, 481)
         Me.Guna2Panel1.TabIndex = 2
+        '
+        'BSubmit
+        '
+        Me.BSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BSubmit.FillColor = System.Drawing.Color.Gray
+        Me.BSubmit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BSubmit.ForeColor = System.Drawing.Color.White
+        Me.BSubmit.Location = New System.Drawing.Point(21, 308)
+        Me.BSubmit.Name = "BSubmit"
+        Me.BSubmit.Size = New System.Drawing.Size(140, 38)
+        Me.BSubmit.TabIndex = 7
+        Me.BSubmit.Text = "Submit"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(28, 221)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(100, 16)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Ingrese el valor"
+        '
+        'textValue
+        '
+        Me.textValue.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.textValue.DefaultText = ""
+        Me.textValue.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.textValue.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.textValue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.textValue.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.textValue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.textValue.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.textValue.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.textValue.Location = New System.Drawing.Point(21, 249)
+        Me.textValue.Name = "textValue"
+        Me.textValue.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.textValue.PlaceholderText = ""
+        Me.textValue.SelectedText = ""
+        Me.textValue.Size = New System.Drawing.Size(140, 33)
+        Me.textValue.TabIndex = 5
         '
         'ComboBoxGender
         '
@@ -123,26 +172,11 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Analysis type"
         '
-        'BSubmit
-        '
-        Me.BSubmit.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BSubmit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BSubmit.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BSubmit.FillColor = System.Drawing.Color.Indigo
-        Me.BSubmit.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BSubmit.ForeColor = System.Drawing.Color.White
-        Me.BSubmit.Location = New System.Drawing.Point(31, 237)
-        Me.BSubmit.Name = "BSubmit"
-        Me.BSubmit.Size = New System.Drawing.Size(91, 29)
-        Me.BSubmit.TabIndex = 5
-        Me.BSubmit.Text = "Submit"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(537, 541)
+        Me.ClientSize = New System.Drawing.Size(241, 653)
         Me.Controls.Add(Me.Guna2Panel2)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -162,4 +196,6 @@ Partial Class Form1
     Friend WithEvents ComboBoxAnalysis As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents BSubmit As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents textValue As Guna.UI2.WinForms.Guna2TextBox
 End Class

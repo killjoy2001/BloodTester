@@ -1,4 +1,9 @@
 ﻿Public Class Form1
+
+    Private analysisType As String
+    Private gender As String
+    Private value As Double
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBoxAnalysis.Items.Add("Red blood cells")
         ComboBoxAnalysis.Items.Add("Hemoglobin")
@@ -10,16 +15,15 @@
 
         ComboBoxGender.Items.Add("Male")
         ComboBoxGender.Items.Add("Female")
-
-
     End Sub
 
-    Private Sub ComboBoxAnalysis_SelectedIndexChanged(sender As Object, e As EventArgs)
-        ' aquí se pone el evento del primer combo box
+    Private Sub BSubmit_Click(sender As Object, e As EventArgs) Handles BSubmit.Click
+
+        Dim valueString As Double
+        'almacenamos los valores del dropdown en variables
+        analysisType = ComboBoxAnalysis.SelectedItem.ToString() 'acá se asigna valor a la variable
+        gender = ComboBoxGender.SelectedItem.ToString()
+        valueString = textValue.Text
+        value = Double.Parse(valueString)
     End Sub
-
-    Private Sub ComboBoxGender_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
 End Class
