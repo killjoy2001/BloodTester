@@ -26,4 +26,19 @@
         valueString = textValue.Text
         value = Double.Parse(valueString)
     End Sub
+
+    Private Function calculate(analysisType As String, gender As String, value As Double)
+        If analysisType = "Red blood cells" AndAlso gender = "Male" AndAlso value <= 4.25 AndAlso value >= 5.9 Then
+            Return "Standard"
+        Else
+            Return "Altered"
+        End If
+
+        If analysisType = "Red blood cells" AndAlso gender = "Female" AndAlso value <= 4.1 AndAlso value >= 5.1 Then
+            Return "Standard"
+        Else
+            Return "Altered"
+
+        End If
+    End Function
 End Class
