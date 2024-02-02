@@ -32,6 +32,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBoxAnalysis = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblResultado = New System.Windows.Forms.Label()
         Me.Guna2Panel2.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -63,6 +64,7 @@ Partial Class Form1
         'Guna2Panel1
         '
         Me.Guna2Panel1.BackColor = System.Drawing.Color.BlueViolet
+        Me.Guna2Panel1.Controls.Add(Me.lblResultado)
         Me.Guna2Panel1.Controls.Add(Me.BSubmit)
         Me.Guna2Panel1.Controls.Add(Me.Label4)
         Me.Guna2Panel1.Controls.Add(Me.textValue)
@@ -172,6 +174,17 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Analysis type"
         '
+        'lblResultado
+        '
+        Me.lblResultado.AutoSize = True
+        Me.lblResultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblResultado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblResultado.Location = New System.Drawing.Point(56, 409)
+        Me.lblResultado.Name = "lblResultado"
+        Me.lblResultado.Size = New System.Drawing.Size(0, 24)
+        Me.lblResultado.TabIndex = 8
+        Me.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -198,4 +211,5 @@ Partial Class Form1
     Friend WithEvents BSubmit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
     Friend WithEvents textValue As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents lblResultado As Label
 End Class
